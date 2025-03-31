@@ -3,14 +3,12 @@ import { useStore } from "../store/zustandStore";
 import Modal from "react-modal";
 
 const Step4: FC = () => {
-  const { data, setData } = useStore(); // استخدام البيانات من Zustand
+  const { data, setData } = useStore();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingField, setEditingField] = useState<string | null>(null);
   const [fieldValue, setFieldValue] = useState<string | undefined>(undefined);
 
-  useEffect(() => {
-    console.log("Step4 received data:", data);
-  }, [data]);
+
 
   const handleEdit = (
     e: React.MouseEvent,
